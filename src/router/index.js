@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Index from '../views/Index.vue'
 import Timer from '../views/Timer.vue'
+import ListUsers from '../views/ListUsers.vue'
 
 const routes = [
   {
@@ -12,6 +13,11 @@ const routes = [
     path: '/Timer',
     name: 'Timer',
     component: Timer
+  },
+  {
+    path: '/ListUsers',
+    name: 'ListUsers',
+    component: ListUsers
   }
 ]
 

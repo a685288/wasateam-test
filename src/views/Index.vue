@@ -1,9 +1,9 @@
 <template>
   <div id="Index">
-    <Filter :filter-data="filterData" @filter-data="filterData"/>
-    <div>
+    <Filter :filter-data="filterData" @getFilterData="getfilterData"/>
+    <div class="result">
       <p>篩選結果：</p>
-      <div>{{ selectedValue || '' }}</div>
+      <div>{{ selectedValue }}</div>
     </div>
   </div>
 </template>
@@ -18,10 +18,9 @@ export default {
       filterData: [ // 篩選器傳入資料
         {
           type: 'select',
-          title: '年齡',
+          title: '請選擇你的年齡',
           name: 'age',
           options: [
-            '請選擇你的年齡',
             '1-10',
             '11-20',
             '21-30'
@@ -48,9 +47,7 @@ export default {
   mounted() {
   },
   methods: {
-    filterData(selectedValue){
-      console.log(selectedValue)
-      
+    getfilterData(selectedValue){
       this.selectedValue = selectedValue
     }
   }
@@ -60,7 +57,10 @@ export default {
 #Index{
   background-color: $bgColor;
   height: 100vh;
-  padding: 20px;
-
+  padding: 50px;
+  .result{
+    width: 500px;
+    margin: 20px auto;
+  }
 }
 </style>

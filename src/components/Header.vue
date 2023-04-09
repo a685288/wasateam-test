@@ -5,10 +5,10 @@
     </div>
     <div class="switchContainer">
       <div class="switch">
-        <input type="checkbox" id="toggle" v-model="isDarkMode" @change="toggleTheme">
+        <input type="checkbox" id="toggle" v-model="colorMode" @change="toggleTheme">
         <label for="toggle" class="slider round"></label>
       </div>
-      <span>{{ isDarkMode ? 'Dark Mode' : 'Light Mode' }}</span>
+      <span>{{ colorModeText }}</span>
     </div>
   </div>
 </template>
@@ -30,16 +30,23 @@ export default {
           name: 'ListUsers'
         }
       ],
-      isDarkMode: false // 目前是否為暗色主題
+      colorMode: false // 目前主題色
+    }
+  },
+  computed: {
+    colorModeText(){
+      return this.colorMode ? 'Dark Mode' : 'Light Mode'
     }
   },
   mounted() {
   },
   methods: {
     toggleTheme(){
-      console.log('toggleTheme',colorMode)
-      
-      colorMode = colorMode == 'light' ? 'dark' : 'light'
+      let element = document.getElementById('app')
+      if(this.colorMode)
+        element.classList.add('dark')
+      else
+        element.classList.remove('dark')
     }
   }
 }

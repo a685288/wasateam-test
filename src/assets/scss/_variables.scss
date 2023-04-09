@@ -1,18 +1,22 @@
-$bgColor: #CBAD8D;
-$bgColor2: #fff;
-$bgColor3: #272625;
+$LightModebgColor: #ebdccd; // 明亮模式背景
+$LightModebgColor2: #c79b70; // 明亮模式背景2
+$LightModeFontColor: #333; // 明亮模式字體
 
-$mainColor: #CBAD8D;
-$subColor: #A48374;
-$secondaryColor: #272625;
-$infoColor: #D1C7BD;
+$DarkModebgColor: #333; // 暗色模式背景
+$DarkModeFontColor: #fff; // 暗色模式字體
 
-$mainFontColor: #333;
-$subFontColor: #666;
-$lightFontColor: #fff;
-$brownFontColor: #9b7956;
-
-// $fontSize:(
-//   XXXXL: 36px;
-//   XXXL: 32px;
-//   XXL: 28px;XL: 24px;L: 20px;M: 18px;S: 16px;XS: 14px)
+#app{
+  background-color: $LightModebgColor !important;
+  color: $LightModeFontColor;
+  &.dark{
+    background-color: $DarkModebgColor !important;
+    color: $DarkModeFontColor;
+    $LightModebgColor2: #8d7257;
+    a{
+      color: $DarkModeFontColor;
+    }
+  }
+  a{
+    color: $LightModeFontColor;
+  }
+}

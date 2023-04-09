@@ -58,7 +58,7 @@ export default {
 #Filter{
   width: 500px;
   border-radius: 4px;
-  background-color: $bgColor2;
+  background-color: $LightModebgColor2;
   margin: 0 auto;
   padding: 40px;
   line-height: 200%;

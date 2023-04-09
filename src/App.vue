@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="app">
     <Header />
     <router-view v-slot="{ Component }">
       <transition>
@@ -24,7 +24,9 @@ export default {
 }
 </script>
 
-<style lang="sass">
-#app
-  font-family: Roboto, Avenir, Helvetica, Arial, sans-serif
+<style lang="scss">
+.app{
+  font-family: Roboto, Avenir, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+}
 </style>

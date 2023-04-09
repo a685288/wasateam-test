@@ -55,8 +55,6 @@ export default {
 </script>
 <style lang="scss">
 #Index{
-  background-color: $bgColor;
-  height: 100vh;
   padding: 50px;
   .result{
     width: 500px;
